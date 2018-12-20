@@ -5,17 +5,21 @@ box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
   <div class="col-sm-12" style="text-align:center;">
     <h1>LOGIN</h1></div>
 
-<form [formGroup]="loginForm" (submit)="onLoginSubmit()" style="text-align:center; margin-top:40px; margin-left:150px; padding:20px;" >
+<div class="container">
+    <div class="jumbotron">
+<form #frm="ngForm" (ngSubmit)="onLoginSubmit(frm)">
  
-               <div >
+               <div class="form-group" >
                  <label>Email ID:</label>
-                 <input formControlName="email" type="email" value="" style=" margin-left:15px;" placeholder="abc@siemens.com" name="username" (keyup)="onEntry(loginname.value)" #loginame> 
+                 <input class="form-control" type="email" value="" style=" margin-left:15px;" placeholder="abc@siemens.com" name="username" (keyup)="onEntry(loginname.value)" ngModel #loginame> 
                </div>
-               <div >
+               <div class="form-group" >
                  <br>
                  <label>Password </label>
-                 <input formControlName="password" type="password" style=" margin-left:15px;" name="password">
+                 <input class="form-control" type="password" style=" margin-left:15px;" name="password" ngModel >
                </div>
-               <input type="submit"   style=" margin-top:15px;" value="Login" (click)="check()" >
+               <input type="submit" class="btn btn-primary btn-lg" style=" margin-top:15px;" value="Login" (click)="check()" >
              </form>
-             
+            </div></div>
+
+            {{frm.value | json}}
