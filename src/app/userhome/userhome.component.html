@@ -1,20 +1,110 @@
-<div class="row" style="margin-top:40px; background-color:#ede9f5;
--webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
--moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
-  <!-- <div class="col-sm-12" style="text-align:center;">
-    Register
-  </div> -->
+<!DOCTYPE html>
+<html>
 
-  <div class="col-sm-12">
-      <div class="jumbotron">
-          <h1 class="display-4">Hello{{username}}!</h1>
-          <p class="lead">You have successfully logged into Dashboard.</p>
-          <hr class="my-4">
-       
-          <p class="lead" style="color:white;">
-            <a class="btn btn-success" role="button" (click)="moveToLogin()">Log Out</a>
-          </p>
-        </div>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+  <div class="topnav1">
+    <a>Hello Allen!</a>
+    <a class="active" style="float:right">Code.Siemens.com</a>
   </div>
-</div>
+
+  <div class="topnav2">
+    <form class="search" style="max-width:500px">
+      <input type="text" placeholder="Search for Project, People, Location" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="dropdown" style="float:right">
+      <button class="dropbtn"><i class="fa fa-user">  Allen</i></button>
+      <div class="dropdown-content">
+        <a href="#"><i class="fa fa-user"> Profile</i></a>
+        <a href="#"><i class="fa fa-sign-out"> Logout</i></a>
+      </div>
+    </div>
+    <a href="#" style="float:right"><i class="fa fa-envelope"></i></a>
+    <a href="#" style="float:right"><i class="fa fa-globe"></i></a>
+    <a href="#" style="float:right"><i class="fa fa-folder"></i></a>
+  </div>
+
+  <div class="topnav3">
+    
+    <div class="filterdropdown" >
+      <button  class="filterbtn">Filter</button>
+      <div class="filter-content">
+        <button  class="fbtn" (click)="filterSelection('all')">Status</button>
+        <button  class="fbtn" (click)="filterSelection('Ongoing')">Ongoing</button>
+        <button  class="fbtn" (click)="filterSelection('Deadlock')">Deadlock</button>
+        <button  class="fbtn" (click)="filterSelection('Completed')">Completed</button>
+      </div>
+    </div>
+     </div>
+
+
+
+  <div class="row" style="margin-top:50px ">
+    <div class="column">
+      <h2>Project 1</h2>
+      <p  class="filterDiv Ongoing"><b>Status: Ongoing</b></p>
+      <p>Duration: 1 month</p>
+      <p>Department: Reuse</p>
+    </div>
+    <div class="column">
+      <h2>Project 2</h2>
+      <p class="filterDiv Completed"><b>Status: Completed</b></p>
+      <p>Duration: 6 months</p>
+      <p>Department: Reuse</p>
+    </div>
+    <div class="column">
+      <h2>Project 3</h2>
+      <p  class="filterDiv Ongoing"><b>Status: Ongoing</b></p>
+      <p>Duration: 5 months</p>
+      <p>Department: Reuse</p>
+    </div>
+  </div>
+  <div class="row">
+      <div class="column">
+        <h2>Project 4</h2>
+        <p class="filterDiv Completed"><b>Status: Completed</b></p>
+        <p>Duration: 4 months</p>
+        <p>Department: Reuse</p>
+      </div>
+      <div class="column">
+        <h2>Project 5</h2>
+        <p class="filterDiv Deadlock"><b>Status: Deadlock</b></p>
+        <p>Duration: 6 months</p>
+        <p>Department: Reuse</p>
+      </div>
+      <div class="column">
+        <h2>Project 6</h2>
+        <p class="filterDiv Completed"><b>Status: Completed</b></p>
+        <p>Duration: 10 months</p>
+        <p>Department: Reuse</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h2>Project 7</h2>
+        <p class="filterDiv Ongoing"><b>Status: Ongoing</b></p>
+        <p>Duration: 7 months</p>
+        <p>Department: Reuse</p>
+      </div>
+      <div class="column">
+        <h2>Project 8</h2>
+        <p class="filterDiv Deadlock"><b>Status: Deadlock</b></p>
+        <p>Duration: 6 months</p>
+        <p>Department: Reuse</p>
+      </div>
+      <div class="column">
+        <h2>Project 9</h2>
+        <p class="filterDiv Completed"><b>Status: Completed</b></p>
+        <p>Duration: 9 months</p>
+        <p>Department: Reuse</p>
+      </div>
+    </div> 
+</body>
+
+</html>
